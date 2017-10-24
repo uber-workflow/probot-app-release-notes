@@ -16,10 +16,10 @@ module.exports = function generateChangelog(changes, labelWeight) {
 
   if (weighted.length) {
     lines.push('### Highlighted Changes');
-    for (let [key, value] of weighted) {
+    for (let [, value] of weighted) {
       lines.push(changeSection(value.labels));
 
-      for (change of value.changes) {
+      for (let change of value.changes) {
         lines.push(changeItem(change, true));
       }
     }
@@ -28,8 +28,8 @@ module.exports = function generateChangelog(changes, labelWeight) {
   if (nonweighted.length) {
     lines.push('');
     lines.push('### Other Changes');
-    for (let [key, value] of nonweighted) {
-      for (change of value.changes) {
+    for (let [, value] of nonweighted) {
+      for (let change of value.changes) {
         lines.push(changeItem(change, false));
       }
     }
@@ -60,7 +60,7 @@ function getWeight(labels, labelWeight) {
 
 function indexByWeight(changes, labelWeight) {
   const index = new Map();
-  for (change of changes) {
+  for (let change of changes) {
     const weight = getWeight(change.labels, labelWeight);
     if (!index.has(weight)) {
       index.set(weight, {changes: new Set(), labels: change.labels});
@@ -81,7 +81,7 @@ function changeItem(pr, indent = false) {
 }
 
 function labelImage({color, name}) {
-  return `https://gh-label-svg.now.sh/label.svg?color=%23${color}&text=${name}`;
+  return `https://gh-label-svg.now.sh/label.svg?color=${color}&text=${name}`;
 }
 
 // console.log(generateChangelog());

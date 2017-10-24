@@ -15,7 +15,7 @@ async function fetchPrForCommit(repo, sha) {
   }
 }
 
-const mergedRegex = /<li class="pull-request">\((?:.+?)(\d+)<\/a>\)\<\/li>/;
+const mergedRegex = /<li class="pull-request">\((?:.+?)(\d+)<\/a>\)<\/li>/;
 
 function findPull(res) {
   const pr = res.match(mergedRegex);

@@ -28,7 +28,7 @@ module.exports = robot => {
       context,
       release.target_commitish,
       releasesBySha,
-      [releasetarget_commitish],
+      [release.target_commitish],
     );
     const body = await notesForCommits(context, commits);
 
@@ -230,7 +230,7 @@ async function fetchRelevantCommits(
   // todo: verify no two releases target same commit hash
 
   await fetchPages(github, req, commits => {
-    for (commit of commits.data) {
+    for (let commit of commits.data) {
       if (commitCache.has(commit.sha)) {
         // break out of loop if we've already encountered this commit.
         // hence as we have already visited all parents

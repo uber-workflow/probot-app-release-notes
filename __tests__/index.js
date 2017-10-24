@@ -4,6 +4,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+/* eslint-env jest */
+
 const t = require('assert');
 
 test('dummy test', () => {

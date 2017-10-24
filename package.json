@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "node-fetch": "^1.7.3",
-    "probot": "^0.11.0"
+    "probot": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^4.8.0",

@@ -4,8 +4,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const path = require('path');
-
 const pattern = /(\d{5})\.md/;
 
 module.exports = async function generateMigrationGuide(context, prs) {
