@@ -1,6 +1,6 @@
 {
   "name": "probot-app-release-notes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "GitHub App that sets release notes",
   "author": "Ryan Tsao <ryan.j.tsao@gmail.com>",
   "contributors": [],
