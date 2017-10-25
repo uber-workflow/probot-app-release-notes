@@ -63,7 +63,12 @@ function indexByWeight(changes, labelWeight) {
   for (let change of changes) {
     const weight = getWeight(change.labels, labelWeight);
     if (!index.has(weight)) {
-      index.set(weight, {changes: new Set(), labels: change.labels});
+      index.set(weight, {
+        changes: new Set(),
+        labels: change.labels
+          .filter(label => labelWeight.includes(label.name))
+          .sort(label => labelWeight.indexOf(label.name)),
+      });
     }
     index.get(weight).changes.add(change);
   }
