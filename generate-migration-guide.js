@@ -9,11 +9,20 @@ const pattern = /(\d{5})\.md/;
 module.exports = async function generateMigrationGuide(context, prs) {
   const {github} = context;
 
-  const migrations = await github.repos.getContent(
-    context.repo({
-      path: 'docs/migrations',
-    }),
-  );
+  let migrations;
+  try {
+    migrations = await github.repos.getContent(
+      context.repo({
+        path: 'docs/migrations',
+      }),
+    );
+  } catch (err) {
+    if (err.code === 404) {
+      return '';
+    } else {
+      throw new Error('unexpected error getting docs/migrations');
+    }
+  }
 
   const files = migrations.data.filter(file => {
     if (file.type === 'file') {
