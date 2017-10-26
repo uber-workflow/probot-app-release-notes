@@ -88,5 +88,3 @@ function changeItem(pr, indent = false) {
 function labelImage({color, name}) {
   return `https://gh-label-svg.now.sh/label.svg?color=${color}&text=${name}`;
 }
-
-// console.log(generateChangelog());

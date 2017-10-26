@@ -29,6 +29,8 @@ labels:
 - bugfix
 - dependencies
 - performance
+ignore:
+- release
 ```
 
 [build-badge]: https://travis-ci.org/uber-web/probot-app-release-notes.svg?branch=master

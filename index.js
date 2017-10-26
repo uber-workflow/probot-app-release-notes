@@ -156,7 +156,7 @@ async function notesForCommits(context, commits) {
     ),
   );
 
-  const changes = issues.map(issue => ({
+  let changes = issues.map(issue => ({
     labels: issue.data.labels,
     title: issue.data.title,
     number: issue.data.number,
@@ -172,6 +172,11 @@ async function notesForCommits(context, commits) {
       'dependencies',
       'performance',
     ],
+    ignore: ['release'],
+  });
+
+  changes = changes.filter(change => {
+    return !change.labels.some(label => config.ignore.includes(label));
   });
 
   const prNums = changes.reduce((acc, change) => {
