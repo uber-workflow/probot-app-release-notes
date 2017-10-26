@@ -176,7 +176,7 @@ async function notesForCommits(context, commits) {
   });
 
   changes = changes.filter(change => {
-    return !change.labels.some(label => config.ignore.includes(label));
+    return !change.labels.some(label => config.ignore.includes(label.name));
   });
 
   const prNums = changes.reduce((acc, change) => {
