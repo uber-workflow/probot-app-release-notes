@@ -26,13 +26,19 @@ module.exports = function generateChangelog(changes, labelWeight) {
   }
 
   if (nonweighted.length) {
-    lines.push('');
-    lines.push('### Other Changes');
+    if (weighted.length) {
+      lines.push('');
+      lines.push('### Other Changes');
+    }
     for (let [, value] of nonweighted) {
       for (let change of value.changes) {
         lines.push(changeItem(change, false));
       }
     }
+  }
+
+  if (!nonweighted.length && !weighted.length) {
+    lines.push('No pull requests in this release');
   }
 
   return lines.join('\n');
