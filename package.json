@@ -8,6 +8,7 @@
   "scripts": {
     "start": "probot run ./index.js",
     "test": "npm run lint && jest",
+    "jest": "jest",
     "lint": "eslint .",
     "fix": "eslint . --fix"
   },
