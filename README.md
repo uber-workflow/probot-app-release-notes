@@ -21,6 +21,7 @@ See [docs/deploy.md](docs/deploy.md) if you would like to run your own instance 
 ## Config
 
 `.github/release-notes.yml`
+
 ```yml
 labels:
 - security
@@ -33,8 +34,8 @@ ignore:
 - release
 ```
 
-[build-badge]: https://travis-ci.org/uber-web/probot-app-release-notes.svg?branch=master
-[build-href]: https://travis-ci.org/uber-web/probot-app-release-notes
+[build-badge]: https://badge.buildkite.com/ba016928484b4627066c1801a56df476a93a452dce8da925ea.svg?branch=master
+[build-href]: https://buildkite.com/uberopensource/probot-app-release-notes
 [deps-badge]: https://david-dm.org/uber-web/probot-app-release-notes.svg
 [deps-href]: https://david-dm.org/uber-web/probot-app-release-notes
 [npm-badge]: https://badge.fury.io/js/probot-app-release-notes.svg
