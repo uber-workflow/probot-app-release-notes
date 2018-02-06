@@ -13,7 +13,7 @@
     "fix": "eslint . --fix"
   },
   "dependencies": {
-    "node-fetch": "1.7.3",
+    "node-fetch": "2.0.0",
     "probot": "4.1.0"
   },
   "devDependencies": {
