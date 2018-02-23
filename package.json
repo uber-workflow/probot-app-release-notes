@@ -19,7 +19,7 @@
   "devDependencies": {
     "eslint": "4.18.1",
     "eslint-plugin-prettier": "2.6.0",
-    "jest": "22.3.0",
+    "jest": "22.4.2",
     "localtunnel": "1.8.3",
     "prettier": "1.10.2"
   },
