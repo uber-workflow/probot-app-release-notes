@@ -10,6 +10,17 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
+"@octokit/rest@14.0.9":
+  version "14.0.9"
+  resolved "https://registry.yarnpkg.com/@octokit/rest/-/rest-14.0.9.tgz#d5e0a00dcb78901dd7b2ef852acfc0aea7c479ef"
+  dependencies:
+    before-after-hook "^1.1.0"
+    debug "^3.1.0"
+    is-array-buffer "^1.0.0"
+    is-stream "^1.1.0"
+    lodash "^4.17.4"
+    url-template "^2.0.8"
+
 abab@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
@@ -44,12 +55,6 @@ acorn@^3.0.4:
 acorn@^5.0.0, acorn@^5.3.0, acorn@^5.4.0:
   version "5.4.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.4.1.tgz#fdc58d9d17f4a4e98d102ded826a9b9759125102"
-
-agent-base@^4.1.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-4.2.0.tgz#9838b5c3392b962bad031e6a4c5e1024abec45ce"
-  dependencies:
-    es6-promisify "^5.0.0"
 
 ajv-keywords@^2.1.0:
   version "2.1.1"
@@ -383,6 +388,10 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
+before-after-hook@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/before-after-hook/-/before-after-hook-1.1.0.tgz#83165e15a59460d13702cb8febd6a1807896db5a"
+
 bl@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/bl/-/bl-1.1.2.tgz#fdca871a99713aa00d19e3bbba41c44787a65398"
@@ -428,9 +437,9 @@ boom@5.x.x:
   dependencies:
     hoek "4.x.x"
 
-bottleneck@^1.16.0:
-  version "1.16.0"
-  resolved "https://registry.yarnpkg.com/bottleneck/-/bottleneck-1.16.0.tgz#d6ce13808527afc80b69092f15606655e5b21f1a"
+bottleneck@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/bottleneck/-/bottleneck-2.1.0.tgz#6574a78501d717b3ace434897063f986358a5252"
 
 brace-expansion@^1.1.7:
   version "1.1.8"
@@ -827,9 +836,9 @@ domexception@^1.0.0:
   dependencies:
     webidl-conversions "^4.0.2"
 
-dotenv@^4.0.0, dotenv@~4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-4.0.0.tgz#864ef1379aced55ce6f95debecdce179f7a0cd1d"
+dotenv@~5.0.0:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-5.0.1.tgz#a5317459bd3d79ab88cff6e44057a6a3fbb1fcef"
 
 dtrace-provider@~0.8:
   version "0.8.6"
@@ -881,16 +890,6 @@ es-to-primitive@^1.1.1:
     is-callable "^1.1.1"
     is-date-object "^1.0.1"
     is-symbol "^1.0.1"
-
-es6-promise@^4.0.3:
-  version "4.2.4"
-  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.4.tgz#dc4221c2b16518760bd8c39a52d8f356fc00ed29"
-
-es6-promisify@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/es6-promisify/-/es6-promisify-5.0.0.tgz#5109d62f3e56ea967c4b63505aef08291c8a5203"
-  dependencies:
-    es6-promise "^4.0.3"
 
 escape-html@~1.0.3:
   version "1.0.3"
@@ -1213,12 +1212,6 @@ flat-cache@^1.2.1:
     graceful-fs "^4.1.2"
     write "^0.2.1"
 
-follow-redirects@1.2.6:
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.2.6.tgz#4dcdc7e4ab3dd6765a97ff89c3b4c258117c79bf"
-  dependencies:
-    debug "^3.1.0"
-
 for-in@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
@@ -1334,17 +1327,6 @@ github-webhook-handler@^0.7.0:
   dependencies:
     bl "~1.1.2"
     buffer-equal-constant-time "~1.0.1"
-
-github@^12.0.3:
-  version "12.1.0"
-  resolved "https://registry.yarnpkg.com/github/-/github-12.1.0.tgz#f2a2dcbd441178155942257491a4bc08bf661dd7"
-  dependencies:
-    dotenv "^4.0.0"
-    follow-redirects "1.2.6"
-    https-proxy-agent "^2.1.0"
-    lodash "^4.17.4"
-    mime "^2.0.3"
-    netrc "^0.1.4"
 
 glob-base@^0.3.0:
   version "0.3.0"
@@ -1548,13 +1530,6 @@ http-signature@~1.2.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
-https-proxy-agent@^2.1.0:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-2.1.1.tgz#a7ce4382a1ba8266ee848578778122d491260fd9"
-  dependencies:
-    agent-base "^4.1.0"
-    debug "^3.1.0"
-
 iconv-lite@0.4.19, iconv-lite@^0.4.17:
   version "0.4.19"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
@@ -1621,6 +1596,10 @@ invert-kv@^1.0.0:
 ipaddr.js@1.5.2:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/ipaddr.js/-/ipaddr.js-1.5.2.tgz#d4b505bde9946987ccf0fc58d9010ff9607e3fa0"
+
+is-array-buffer@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/is-array-buffer/-/is-array-buffer-1.0.0.tgz#f32497a0509d109423f472003f98bab6a8ea34cb"
 
 is-arrayish@^0.2.1:
   version "0.2.1"
@@ -2443,10 +2422,6 @@ mime@1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/mime/-/mime-1.4.1.tgz#121f9ebc49e3766f311a76e1fa1c8003c4b03aa6"
 
-mime@^2.0.3:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/mime/-/mime-2.2.0.tgz#161e541965551d3b549fa1114391e3a3d55b923b"
-
 mimic-fn@^1.0.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-1.2.0.tgz#820c86a39334640e99516928bd03fca88057d022"
@@ -2514,10 +2489,6 @@ ncp@~2.0.0:
 negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
-
-netrc@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/netrc/-/netrc-0.1.4.tgz#6be94fcaca8d77ade0a9670dc460914c94472444"
 
 node-fetch@2.0.0:
   version "2.0.0"
@@ -2854,20 +2825,20 @@ private@^0.1.7:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
 
-probot@5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/probot/-/probot-5.0.1.tgz#1fe05e29fb8c1f04f40174ebc1d0e245f2f6c719"
+probot@6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/probot/-/probot-6.0.0.tgz#653ffac1943a42cf2f177a8d5943d37a6b1d47ba"
   dependencies:
-    bottleneck "^1.16.0"
+    "@octokit/rest" "14.0.9"
+    bottleneck "^2.0.0"
     bunyan "^1.8.12"
     bunyan-format "^0.2.1"
     bunyan-sentry-stream "^1.1.0"
     cache-manager "^2.4.0"
     commander "^2.11.0"
-    dotenv "~4.0.0"
+    dotenv "~5.0.0"
     express "^4.16.2"
     express-async-errors "2.1.1"
-    github "^12.0.3"
     github-webhook-handler "^0.7.0"
     hbs "^4.0.1"
     js-yaml "^3.9.1"
@@ -3589,6 +3560,10 @@ ultron@~1.1.0:
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
+
+url-template@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/url-template/-/url-template-2.0.8.tgz#fc565a3cccbff7730c775f5641f9555791439f21"
 
 util-deprecate@~1.0.1:
   version "1.0.2"
