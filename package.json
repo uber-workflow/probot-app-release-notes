@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "node-fetch": "2.1.2",
-    "probot": "6.0.0"
+    "probot": "6.1.0"
   },
   "devDependencies": {
     "eslint": "4.19.1",
