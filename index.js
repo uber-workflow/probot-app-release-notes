@@ -22,6 +22,11 @@ module.exports = robot => {
   async function handler(context) {
     const release = context.payload.release;
 
+    // Don't generate release notes for prereleases
+    if (release.prerelease) {
+      return;
+    }
+
     const releasesBySha = await fetchAllReleases(context);
 
     const {commits} = await getChangeInfo(
@@ -99,6 +104,10 @@ async function fetchAllReleases(context, handler = () => {}) {
   );
   await fetchPages(github, req, results => {
     results.data.forEach(release => {
+      if (release.prerelease) {
+        // Ignore prereleases, so changelog reflects changes since last non-prerelease
+        return;
+      }
       releasesBySha.set(release.target_commitish, release);
       handler(release);
     });
